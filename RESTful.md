@@ -140,3 +140,39 @@ Tell the server you are reconnecting to the ssh tunnel.
 
 The error messages are the same as `GET`.
 
+### /host
+Header should contain `Authorization: Bearer <user token>`
+
+`POST /host`
+Tell the server you want to be the host, if the host has retired, you can be the new host.
+
+**request**
+```
+{}
+```
+
+**response**
+```
+{"status": "ok"}
+```
+
+```
+{"status": "failed", "message": "Host is some one else now."}
+```
+
+`DELETE /host`
+Tell the server you don't want to be the host and allow others to be the new host.
+
+**request**
+```
+{}
+```
+
+**response**
+```
+{"status": "ok"}
+```
+
+```
+{"status": "failed", "message": "You are not host."}
+```
