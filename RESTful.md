@@ -36,17 +36,20 @@ Get verbose status
     "10.1.1.1": {
         "status": "ok",
         "uptime": "86400",
-        "reconnect_times": "5"
+        "reconnect_times": "5",
+        "role": "client"
     },
     "10.1.1.2": {
         "status": "ok",
         "uptime": "1234",
-        "reconnect_times": "10"
+        "reconnect_times": "10",
+        "role": "host"
     }
     "10.1.1.3": {
         "status": "failed",
         "uptime": "0",
-        "reconnect_times": "100"
+        "reconnect_times": "100",
+        "role": "client"
     }
 }
 ```
